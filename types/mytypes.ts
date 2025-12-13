@@ -64,3 +64,62 @@ export interface ModalResult
     action: string;
     data?: any;
 }
+
+// 角色相关类型
+export interface CharacterData
+{
+    id: string;
+    name: string;
+    health: number;
+    maxHealth: number;
+    position: UIPosition;
+}
+
+// 技能类型
+export interface SkillData
+{
+    id: string;
+    name: string;
+    description: string;
+    cooldown: number;
+}
+
+// 道具类型
+export interface ItemData
+{
+    id: string;
+    name: string;
+    description: string;
+    type: string;
+    quantity: number;
+}
+
+// 动画类型
+export interface AnimationData
+{
+    target: any;
+    property: string;
+    startValue: number;
+    endValue: number;
+    duration: number;
+}
+
+// 特效类型
+export interface EffectData
+{
+    id: string;
+    type: string;
+    position: UIPosition;
+    duration: number;
+}
+
+// 缓动类型
+export interface TweenData
+{
+    target: any;
+    property: string;
+    startValue: number;
+    endValue: number;
+    duration: number;
+    easing?: ( t: number ) => number;
+}
